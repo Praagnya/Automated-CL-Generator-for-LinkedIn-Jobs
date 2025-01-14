@@ -1,2 +1,101 @@
-# Automated-CV-Generator-for-LinkedIn-Jobs
-Designed and implemented an automated system that extracts job descriptions from LinkedIn and generates tailored CVs using the large language model. The project combines web scraping, API integration, AI-powered text generation, and workflow automation to streamline job application processes.
+# Automated CV Generator for LinkedIn Jobs
+
+This project automates the process of creating tailored CVs for job applications by extracting job descriptions from LinkedIn and using a large language model to generate customized CVs. The project integrates web scraping, API calls, and AI-powered text generation to streamline and optimize the job application process.
+
+### Features
+	•	Automated Job Description Extraction: Scrapes job descriptions from LinkedIn using Selenium and BeautifulSoup for detailed and structured data collection.
+	•	AI-Powered CV Generation: Leverages OpenAI’s GPT model to analyze job descriptions and create CVs that align with specific job requirements.
+	•	Workflow Automation: Integrates various tools and frameworks to automate the end-to-end process.
+	•	Customizable Outputs: Allows users to modify templates and input additional details for personalization.
+	•	Error Handling: Implements robust exception handling and retry mechanisms to ensure smooth operation during web scraping and API calls.
+
+### Technology Stack
+	•	Programming Languages: Python
+	•	Libraries and Frameworks:
+	•	Web Scraping: Selenium, BeautifulSoup
+	•	API Integration: openai
+	•	Document Generation: python-docx
+	•	Workflow Automation: APScheduler, argparse
+	•	Deployment: Docker
+	•	Version Control: GitHub
+	•	Testing: unittest
+
+### How It Works
+	1.	Input: Provide LinkedIn job post URLs or search parameters.
+	2.	Scraping: Extract job descriptions using Selenium for browser automation.
+	3.	AI Processing: Use OpenAI’s GPT model to analyze the job description and generate a tailored CV.
+	4.	Output: Save the CV as .docx and .pdf files in a specified directory.
+	5.	Customization: Adjust templates or add personal details for enhanced CV alignment.
+
+### Installation
+
+Prerequisites
+	•	Python 3.8+
+	•	Chrome WebDriver (compatible with your Chrome browser version)
+	•	OpenAI API Key
+
+Steps
+	1.	Clone the repository:
+
+git clone https://github.com/yourusername/Automated-CV-Generator-for-LinkedIn-Jobs.git
+cd Automated-CV-Generator-for-LinkedIn-Jobs
+
+
+	2.	Install dependencies:
+
+pip install -r requirements.txt
+
+
+	3.	Set up environment variables:
+	•	Create a .env file in the root directory:
+
+OPENAI_API_KEY=your_openai_api_key
+
+
+	4.	Run the script:
+
+python main.py --url "https://www.linkedin.com/jobs/view/12345678"
+
+Usage
+
+Command-Line Arguments
+	•	--url: URL of the LinkedIn job post (required).
+	•	--output: Directory to save the CV (default: ./output).
+	•	--template: Path to a custom CV template (optional).
+
+Example:
+
+python main.py --url "https://www.linkedin.com/jobs/view/12345678" --output "./output"
+
+### Project Structure
+
+File/Folder Descriptions
+- **`main.py`**: The main script to run the project, orchestrating the entire workflow.
+- **`scraper.py`**: Contains logic for extracting job descriptions from LinkedIn.
+- **`generator.py`**: Uses AI models to create tailored CVs based on the extracted job descriptions.
+- **`templates/`**: Directory to store CV templates. Includes a default template (`default_template.docx`).
+- **`output/`**: Directory where generated CVs are saved in `.docx` and `.pdf` formats.
+- **`requirements.txt`**: Lists all the Python dependencies required to run the project.
+- **`README.md`**: Documentation for the project, including usage, setup, and details.
+- **`.env`**: Stores sensitive information like API keys and configurations.
+
+Future Enhancements
+	•	Add support for multiple job boards (e.g., Indeed, Glassdoor).
+	•	Implement advanced analytics for CV optimization.
+	•	Introduce a web interface for user interaction.
+	•	Add multi-language support for job descriptions and CVs.
+
+### Contributing
+
+Contributions are welcome! Please follow the guidelines in CONTRIBUTING.md to submit bug reports, feature requests, or pull requests.
+
+### License
+
+This project is licensed under the MIT License. See the LICENSE file for more details.
+
+### Contact
+
+If you have any questions or feedback, feel free to reach out:
+	•	Email: praagnya@gmail.com / pnarasimha@arizona.edu
+
+Let me know if you’d like additional details or modifications!
