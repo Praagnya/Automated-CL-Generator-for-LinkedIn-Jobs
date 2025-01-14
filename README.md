@@ -67,19 +67,17 @@ Example:
 
 python main.py --url "https://www.linkedin.com/jobs/view/12345678" --output "./output"
 
-Project Structure
+### Project Structure
 
-Automated-CV-Generator-for-LinkedIn-Jobs/
-│
-├── main.py                 # Entry point for the script
-├── scraper.py              # Handles LinkedIn web scraping
-├── generator.py            # AI-powered CV generation
-├── templates/              # CV templates
-│   └── default_template.docx
-├── output/                 # Generated CVs
-├── requirements.txt        # Python dependencies
-├── README.md               # Project documentation
-└── .env                    # Environment variables
+File/Folder Descriptions
+- **`main.py`**: The main script to run the project, orchestrating the entire workflow.
+- **`scraper.py`**: Contains logic for extracting job descriptions from LinkedIn.
+- **`generator.py`**: Uses AI models to create tailored CVs based on the extracted job descriptions.
+- **`templates/`**: Directory to store CV templates. Includes a default template (`default_template.docx`).
+- **`output/`**: Directory where generated CVs are saved in `.docx` and `.pdf` formats.
+- **`requirements.txt`**: Lists all the Python dependencies required to run the project.
+- **`README.md`**: Documentation for the project, including usage, setup, and details.
+- **`.env`**: Stores sensitive information like API keys and configurations.
 
 Future Enhancements
 	•	Add support for multiple job boards (e.g., Indeed, Glassdoor).
