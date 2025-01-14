@@ -50,7 +50,8 @@ pip install -r requirements.txt
 	•	Create a .env file in the root directory:
 
 OPENAI_API_KEY=your_openai_api_key
-
+LINKEDIN_EMAIL_ID="your_email_id@example.com"
+LINKEDIN_PASSWORD=*******
 
 	4.	Run the script:
 
@@ -70,14 +71,10 @@ python main.py --url "https://www.linkedin.com/jobs/view/12345678" --output "./o
 ### Project Structure
 
 File/Folder Descriptions
-- **`main.py`**: The main script to run the project, orchestrating the entire workflow.
-- **`scraper.py`**: Contains logic for extracting job descriptions from LinkedIn.
-- **`generator.py`**: Uses AI models to create tailored CVs based on the extracted job descriptions.
-- **`templates/`**: Directory to store CV templates. Includes a default template (`default_template.docx`).
-- **`output/`**: Directory where generated CVs are saved in `.docx` and `.pdf` formats.
-- **`requirements.txt`**: Lists all the Python dependencies required to run the project.
-- **`README.md`**: Documentation for the project, including usage, setup, and details.
-- **`.env`**: Stores sensitive information like API keys and configurations.
+- **main.py**: The main script to run the project, orchestrating the entire workflow.
+- **scraper.py**: Contains logic for extracting job descriptions from LinkedIn. It uses tools like Selenium or BeautifulSoup for web scraping.
+- **user_prompt.py**: Manages the creation of structured prompts fed into AI models. These prompts format user skills and job descriptions for generating cover letters or CVs.
+- **generator.py**: Utilizes AI models (e.g., OpenAI GPT) to create tailored CVs based on the extracted job descriptions and user-provided data.
 
 Future Enhancements
 	•	Add support for multiple job boards (e.g., Indeed, Glassdoor).
