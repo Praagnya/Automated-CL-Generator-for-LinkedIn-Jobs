@@ -15,7 +15,6 @@ from selenium.common.exceptions import TimeoutException, NoSuchElementException
 import time
 from docx import Document
 
-
 # Initialize and constants
 load_dotenv(override=True)
 api_key = os.getenv('OPENAI_API_KEY')
