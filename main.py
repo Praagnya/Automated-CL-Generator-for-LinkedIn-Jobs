@@ -1,13 +1,8 @@
-#!/usr/bin/env python
-# coding: utf-8
-
-# In[4]:
-
-
 import os 
 import requests 
 import json 
 from typing import List 
+from openai import OpenAI
 from dotenv import load_dotenv
 from bs4 import BeautifulSoup 
 from IPython.display import Markdown, display, update_display 
@@ -18,9 +13,7 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.common.exceptions import TimeoutException, NoSuchElementException
 import time
-
-
-# In[5]:
+from docx import Document
 
 
 # Initialize and constants
@@ -34,10 +27,6 @@ else:
 
 MODEL_GPT = 'gpt-4o-mini'
 openai = OpenAI()
-
-
-# In[11]:
-
 
 class LinkedInJDScraper:
     def __init__(self, email, password):
@@ -148,10 +137,6 @@ if __name__ == "__main__":
     finally:
         scraper.close()
 
-
-# In[7]:
-
-
 system_prompt = """
 You are a career assistant specialized in crafting professional and personalized cover letters. 
 Your goal is to create compelling, tailored cover letters that align with the job description. 
@@ -165,11 +150,6 @@ Ensure the letter adheres to the following format:
 Maintain clarity, professionalism, and conciseness while tailoring the letter. Don't add anything like as advertised.
 """
 
-
-# In[12]:
-
-
-from docx import Document
 
 def read_text_from_word(file_path):
     """Extracts and returns all text from a Word document."""
@@ -190,19 +170,7 @@ resume_skills = read_text_from_word(file_path)
 
 print(resume_skills)
 
-
-# In[13]:
-
-
 def get_cl_user_prompt_with_scraped_jd(file_path, job_url, scraper):
-    """
-    Generate a user prompt for CL creation using scraped job description 
-    and skills from a Word document.
-    """
-
-    # # Scrape the job description
-    # job_description = scraper.get_description(job_url)
-    
     # Create the user prompt
     user_prompt = "You are tasked with creating a professional and tailored Cover Letter for a job application.\n"
     user_prompt += "Here is a list of skills and experiences from the candidate's resume:\n"
@@ -213,12 +181,6 @@ def get_cl_user_prompt_with_scraped_jd(file_path, job_url, scraper):
     user_prompt += "Ensure the CV follows a professional format and aligns with the role requirements. Present the CV in markdown format.\n"
     user_prompt = user_prompt 
     return user_prompt
-
-
-# In[14]:
-
-
-from IPython.display import Markdown, display
 
 def create_jd(system_prompt, file_path, job_url, scraper, model="gpt-4"):
 
@@ -235,18 +197,7 @@ def create_jd(system_prompt, file_path, job_url, scraper, model="gpt-4"):
         result = completion.choices[0].message.content
         display(Markdown(result))
 
-
-# In[15]:
-
-
 messages=[{"role": "system", "content": system_prompt}, {"role": "user", "content": get_cl_user_prompt_with_scraped_jd(file_path, job_url, scraper) }]
-
-
-# In[16]:
-
-
-# To give you a preview -- calling OpenAI with system and user messages:
-
 response = openai.chat.completions.create(model="gpt-4o-mini", messages=messages)
 print(response.choices[0].message.content)
 
