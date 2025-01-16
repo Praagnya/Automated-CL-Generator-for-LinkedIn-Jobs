@@ -1,6 +1,6 @@
 # Automated Cover Letter Generator for LinkedIn Jobs
 
-This project automates the process of creating tailored Cover Letter for job applications by extracting job descriptions from LinkedIn and using a large language model to generate customized CVs. The project integrates web scraping, API calls, and AI-powered text generation to streamline and optimize the job application process.
+This project automates the process of creating tailored Cover Letter for job applications by extracting job descriptions from LinkedIn and using a large language model to generate customized Cover Letter. The project integrates web scraping, API calls, and AI-powered text generation to streamline and optimize the job application process.
 
 ### Features
 	•	Automated Job Description Extraction: Scrapes job descriptions from LinkedIn using Selenium and BeautifulSoup for detailed and structured data collection.
@@ -73,8 +73,8 @@ python main.py --url "https://www.linkedin.com/jobs/view/12345678" --output "./o
 File/Folder Descriptions
 - **main.py**: The main script to run the project, orchestrating the entire workflow.
 - **scraper.py**: Contains logic for extracting job descriptions from LinkedIn. It uses tools like Selenium or BeautifulSoup for web scraping.
-- **user_prompt.py**: Manages the creation of structured prompts fed into AI models. These prompts format user skills and job descriptions for generating cover letters or CVs.
-- **generator.py**: Utilizes AI models (e.g., OpenAI GPT) to create tailored CVs based on the extracted job descriptions and user-provided data.
+- **user_prompt.py**: Manages the creation of structured prompts fed into AI models. These prompts format user skills and job descriptions for generating cover letters.
+- **generator.py**: Utilizes AI models (e.g., OpenAI GPT) to create tailored Cover Letter based on the extracted job descriptions and user-provided data.
 
 Future Enhancements
 	•	Add support for multiple job boards (e.g., Indeed, Glassdoor).
