@@ -1,4 +1,4 @@
-# Automated CV Generator for LinkedIn Jobs
+# Automated Cover Letter Generator for LinkedIn Jobs
 
 This project automates the process of creating tailored CVs for job applications by extracting job descriptions from LinkedIn and using a large language model to generate customized CVs. The project integrates web scraping, API calls, and AI-powered text generation to streamline and optimize the job application process.
 
