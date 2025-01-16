@@ -73,8 +73,8 @@ python main.py --url "https://www.linkedin.com/jobs/view/12345678" --output "./o
 File/Folder Descriptions
 - **main.py**: The main script to run the project, orchestrating the entire workflow.
 - **scraper.py**: Contains logic for extracting job descriptions from LinkedIn. It uses tools like Selenium or BeautifulSoup for web scraping.
-- **user_prompt.py**: Manages the creation of structured prompts fed into AI models. These prompts format user skills and job descriptions for generating cover letters or CVs.
-- **generator.py**: Utilizes AI models (e.g., OpenAI GPT) to create tailored CVs based on the extracted job descriptions and user-provided data.
+- **user_prompt.py**: Manages the creation of structured prompts fed into AI models. These prompts format user skills and job descriptions for generating cover letters.
+- **generator.py**: Utilizes AI models (e.g., OpenAI GPT) to create tailored Cover Letter based on the extracted job descriptions and user-provided data or resume.
 
 Future Enhancements
 	•	Add support for multiple job boards (e.g., Indeed, Glassdoor).
