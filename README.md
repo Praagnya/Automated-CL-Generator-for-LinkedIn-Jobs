@@ -16,7 +16,6 @@ This project automates the process of creating tailored Cover Letter for job app
 	•	API Integration: openai
 	•	Document Generation: python-docx
 	•	Workflow Automation: APScheduler, argparse
-	•	Deployment: Docker
 
 ### How It Works
 	1.	Input: Provide LinkedIn job post URLs or search parameters.
