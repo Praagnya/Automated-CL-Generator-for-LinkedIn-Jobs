@@ -89,5 +89,3 @@ This project is licensed under the MIT License. See the LICENSE file for more de
 
 If you have any questions or feedback, feel free to reach out:
 	•	Email: praagnya@gmail.com / pnarasimha@arizona.edu
-
-Let me know if you’d like additional details or modifications!
