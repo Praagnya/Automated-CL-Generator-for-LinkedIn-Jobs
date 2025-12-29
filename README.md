@@ -82,10 +82,3 @@ Future Enhancements
 ### Contributing
 
 Contributions are welcome! Please follow the guidelines in CONTRIBUTING.md to submit bug reports, feature requests, or pull requests.
-
-### License
-
-This project is licensed under the MIT License. See the LICENSE file for more details.
-
-If you have any questions or feedback, feel free to reach out:
-	•	Email: praagnya@gmail.com / pnarasimha@arizona.edu
